@@ -11,7 +11,7 @@ class NewsRepositoryImpl @Inject constructor(
     private val api: NewsRequestApi
 ) : NewsRepository {
 
-    override suspend fun getNewsByQuery(query: String): News {
+    override suspend fun getNewsByQuery(query: String): List<News> {
         return api.getNewsByQuery(Constants.NEWS_API_KEY, query).toDomain()
     }
 

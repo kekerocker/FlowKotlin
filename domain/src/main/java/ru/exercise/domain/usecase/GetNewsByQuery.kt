@@ -10,9 +10,9 @@ import javax.inject.Inject
 class GetNewsByQuery @Inject constructor(
     private val repository: NewsRepository
 ) {
-    private val _newsData: MutableSharedFlow<Resource<News>> = MutableSharedFlow(1)
+    private val _newsData: MutableSharedFlow<Resource<List<News>>> = MutableSharedFlow(1)
 
-    operator fun invoke(): SharedFlow<Resource<News>> {
+    operator fun invoke(): SharedFlow<Resource<List<News>>> {
         return _newsData
     }
 

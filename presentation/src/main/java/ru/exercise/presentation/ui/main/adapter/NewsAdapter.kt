@@ -6,15 +6,15 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
+import ru.exercise.domain.model.News
 import ru.exercise.presentation.R
 import ru.exercise.presentation.databinding.RecycleritemNewsBinding
-import ru.exercise.presentation.model.NewsRecyclerModel
 
 internal class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
 
-    private var model: List<NewsRecyclerModel> = emptyList()
+    private var model: List<News> = emptyList()
 
-    fun setData(model: List<NewsRecyclerModel>) {
+    fun setData(model: List<News>) {
         this.model = model
         notifyDataSetChanged()
     }

@@ -16,7 +16,6 @@ import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import ru.exercise.domain.common.Resource
 import ru.exercise.presentation.databinding.FragmentMainBinding
-import ru.exercise.presentation.model.NewsRecyclerModel
 import ru.exercise.presentation.ui.main.adapter.NewsAdapter
 
 @AndroidEntryPoint
@@ -65,7 +64,7 @@ internal class MainFragment : Fragment() {
                     when (it) {
                         is Resource.Success -> {
                             hideProgressBar()
-                            rvAdapter.setData(it.data.articles.map { model -> NewsRecyclerModel(model.title, model.description, model.urlToImage) })
+                            rvAdapter.setData(it.data)
                         }
                         is Resource.Error -> {
                             hideProgressBar()
