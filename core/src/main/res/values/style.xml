@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.FlowKotlin.Button" parent="ThemeOverlay.Material3.Button">
+        <item name="cornerRadius">18dp</item>
+    </style>
+</resources>
